@@ -1,4 +1,10 @@
-const canvas = document.getElementById('gameCanvas');
+// 既に宣言されていない場合にのみ canvas を宣言
+if (typeof canvas === 'undefined') {
+    var canvas = document.getElementById('gameCanvas');
+} else {
+    canvas = document.getElementById('gameCanvas');
+}
+
 const ctx = canvas.getContext('2d');
 
 const touchLeft = document.getElementById('touch-left');
