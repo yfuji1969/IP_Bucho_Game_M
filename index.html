@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-
-<div id="touch-left" style="position: absolute; left: 0; top: 0; width: 50%; height: 100%;"></div>
-
-<div id="touch-right" style="position: absolute; right: 0; top: 0; width: 50%; height: 100%;"></div>
-
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>My Game</title>
   <style>
     html, body {
       height: 100%;
@@ -18,20 +16,21 @@
       height: 100%;
       width: auto;
     }
-  </style>
-</head>
 
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Game</title>
-  <style>
-    body { margin: 0; overflow: hidden; }
-    canvas { display: block; }
+    body { 
+      margin: 0; 
+      overflow: hidden; 
+    }
+
+    canvas { 
+      display: block; 
+    }
   </style>
 </head>
 <body>
+  <div id="touch-left" style="position: absolute; left: 0; top: 0; width: 50%; height: 100%;"></div>
+  <div id="touch-right" style="position: absolute; right: 0; top: 0; width: 50%; height: 100%;"></div>
+  
   <canvas id="gameCanvas" width="600" height="400"></canvas>
   <script src="./game.js"></script>
 </body>
