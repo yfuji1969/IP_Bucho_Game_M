@@ -1,18 +1,18 @@
 // 既に宣言されていない場合にのみ canvas を宣言
-if (typeof canvas === 'undefined') {
-    var canvas = document.getElementById('gameCanvas');
-} else {
-    canvas = document.getElementById('gameCanvas');
-}
-
+let canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
 const touchLeft = document.getElementById('touch-left');
 const touchRight = document.getElementById('touch-right');
 
-const canvas = document.getElementById('gameCanvas');
+// ウィンドウリサイズに応じてcanvasのサイズを調整
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
 
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
